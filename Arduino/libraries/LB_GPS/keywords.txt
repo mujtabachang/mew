@@ -1,0 +1,95 @@
+#######################################
+# Syntax Coloring Map For LB_GPS
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+GPS	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+# GPS related functions
+
+init	KEYWORD2
+setCommMode	KEYWORD2
+getCommMode	KEYWORD2
+setGPSMode	KEYWORD2
+getTime	KEYWORD2
+setTime	KEYWORD2
+getDate	KEYWORD2
+setDate	KEYWORD2
+getGPSMode	KEYWORD2
+getLocation	KEYWORD2
+getLatitude	KEYWORD2
+getLongitude	KEYWORD2
+getSpeed	KEYWORD2
+getAltitude	KEYWORD2
+getRaw	KEYWORD2
+setSentences	KEYWORD2
+getSentences	KEYWORD2
+dataValid	KEYWORD2
+
+# general functions
+
+getLibVersion	KEYWORD2
+
+# Serial port related functions
+
+begin	KEYWORD2
+read	KEYWORD2
+print	KEYWORD2
+println	KEYWORD2
+
+######################################
+# Instances (KEYWORD2)
+#######################################
+
+# variables, GPS related
+
+inBuffer	KEYWORD2
+arguments	KEYWORD2
+commMode	KEYWORD2
+pwrMode	KEYWORD2
+wakeMode	KEYWORD2
+sentences	KEYWORD2
+timeGPS	KEYWORD2
+dateGPS	KEYWORD2
+coordinates	KEYWORD2
+latitude	KEYWORD2
+longitude	KEYWORD2
+speed		KEYWORD2
+altitude	KEYWORD2
+course	KEYWORD2
+LB_GPS()	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+# GPS power saving modes
+GPS_ON	LITERAL1
+GPS_OFF	LITERAL1
+GPS_SLEEP LITERAL1
+GPS_HIBERNATE 	LITERAL1
+
+# GPS waking up modes
+HOT	LITERAL1
+WARM 	LITERAL1
+COLD 	LITERAL1
+
+# GPS sentence types
+GPGGA	LITERAL1
+GPGSA 	LITERAL1
+GPGSV 	LITERAL1
+GPVTG 	LITERAL1
+GPRMC 	LITERAL1
+
+# GPS Software Serial pins
+GPS_RX 	LITERAL1
+GPS_TX 	LITERAL1
+
+
