@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=yes" />
+<style type="text/css">
+  html { height: 100% }
+  body { height: 100%; margin: 0; padding: 0 }
+  #map_canvas { height: 100% }
+</style>
+<script type="text/javascript"
+    src="http://maps.googleapis.com/maps/api/js?key=AIzaSyB4UZHkBxBob4LerfG--45OZe0T8WfM2AU&sensor=false">
+</script>
+<script type="text/javascript">
+var latlng = new google.maps.LatLng(0, 0);
+
+	var marker;
+	var flightPlanCoordinates;
+	var flightPath;
+var map;
+  function initialize() {
+    //javascript: marker.setPosition(new google.maps.LatLng(25.3183, 68.667));
+	//call this above (navigate to it/enter in browser address bar) when u want to change marker position :P
+	
+    var myOptions = {
+      zoom: 1,
+      center: latlng,
+      mapTypeId: google.maps.MapTypeId.ROADMAP  
+	};
+	
+	flightPlanCoordinates = [
+    new google.maps.LatLng(0, 0)
+  ];
+  
+   flightPath = new google.maps.Polyline({
+    path: flightPlanCoordinates,
+    strokeColor: "#FF0000",
+    strokeOpacity: 1.0,
+    strokeWeight: 2
+  });
+  
+    map = new google.maps.Map(document.getElementById("map_canvas"),
+        myOptions);
+	flightPath.setMap();
+	
+	google.maps.event.addListener(map, 'click', function(event) {
+    
+	window.status=event.latLng
+	
+  });
+
+	
+marker = new google.maps.Marker({
+      position: latlng,
+      map: map,
+	  title:"Current Position of MEW"  });	
+}
+
+</script>
+</head>
+<body onload="initialize()">
+  <div id="map_canvas" style="width:100%; height:100%">
+  </div>
+</body>
+</html>
