@@ -1,2 +1,4 @@
-# mew
-Multipurpose Enduring Watercraft, an autonomous solar watercraft
+# Multipurpose Enduring Watercraft
+
+* An autonomous solar watercraft
+* 
